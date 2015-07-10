@@ -1,0 +1,14 @@
+<div class="container">
+
+<h1> Life's Questions </h1>
+
+
+<ul>
+	{{#each}}
+	<li>{{#link-to 'question' this.id}}{{question.title}}{{/link-to}}
+	</li>	
+	{{/each}}
+</ul>
+	<p><h2><a href="#" {{action 'sortByTitle'}}>Sort By Title</a></h2></p>
+	<p>{{#link-to 'new-question' classNames='btn btn-default btn-block'}}New Question{{/link-to}}	</p>
+</div>	
