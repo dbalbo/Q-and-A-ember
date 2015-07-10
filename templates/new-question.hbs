@@ -1,8 +1,9 @@
 <h1>New Question</h1>
 
+
   <form>
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Question</label>
       {{input id="title" class="form-control" value=title}}
     </div>
 
@@ -17,5 +18,7 @@
       {{textarea id="body" class="form-control" rows="15" value=body}}
     </div>
 
-    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+    <button class="btn btn-default btn-block" {{action 'save'}}>Save</button>
   </form>
+
+

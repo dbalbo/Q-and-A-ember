@@ -12,3 +12,5 @@ Forum.NewQuestionController = Ember.Controller.extend({
     }
   }
 });
+
+
