@@ -1,14 +1,39 @@
 <div class="container">
+  <h1>
+    Life's Questions
+  </h1>
+  <hr>
+  {{#if model}}
+    {{#each question in model}}
+      <div class="round-box question">
+        <h3 class="intro">
+          {{#link-to 'question' question}}{{question.title}}{{/link-to}}
+        </h3>
+        <span class="intro">&mdash; {{question.author}}</span>
+      </div>
+    {{/each}}
+    {{else}}
+    <br>
+    <div class="round-box">
+     
+      <h4 class="intro">
+        Questions. Everyone has them. Start us all off by asking one:
+      </h4>
+    </div>
+  {{/if}}
+  <br>
+  <br>
+  {{#link-to 'new-question' classNames="btn btn-default btn-block"}}New Question{{/link-to}}
+</div>
 
-<h1> Life's Questions </h1>
 
 
-<ul>
-	{{#each}}
-	<li>{{#link-to 'question' this.id}}{{question.title}}{{/link-to}}
-	</li>	
-	{{/each}}
-</ul>
-	<p><h2><a href="#" {{action 'sortByTitle'}}>Sort By Title</a></h2></p>
-	<p>{{#link-to 'new-question' classNames='btn btn-default btn-block'}}New Question{{/link-to}}	</p>
-</div>	
+
+
+
+
+
+
+
+
+
