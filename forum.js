@@ -1,1 +1,0 @@
-Forum = Ember.Application.create();
